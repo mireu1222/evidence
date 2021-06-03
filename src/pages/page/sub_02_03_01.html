@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html', {
+            cate02 : true
+        })
+        <!-- // header -->
+
+        <!-- container -->
+        <div id="container" class="container cate02">
+            @@include('./layout/page-title.html', {
+                cate02 : true,
+                sub0203 : true,
+                title : '에비던스임플란트의 특별함'
+            })
+            <!-- page contents -->
+            <div class="contents">
+                <!-- last depth tab -->
+                @@include('./layout/lastdepth-tab.html', {
+                    cate02 : true,
+                    sub020301 : true,
+                })
+                <!-- // last depth tab -->
+
+                <h4 class="dep-page-title">특허/디자인/실용시안<small>Special permissionstory</small></h4>
+                <div class="section-wrap">
+                    <section>
+                        <h5 class="sect-tit">특허증</h5>
+                        @@include('./modules/img-popup.html', {
+                            img : 'img-sub020301',
+                            list : [
+                                '특허증', '특허증', '특허증', '특허증', '특허증', '특허증', '특허증', '특허증', '특허증', '특허증'
+                            ]
+                        })
+                    </section>
+                    <section>
+                        <h5 class="sect-tit">디자인 등록증</h5>
+                        @@include('./modules/img-popup.html', {
+                            img : 'img-sub020301-2',
+                            list : [
+                                '디자인 등록증', '디자인 등록증', '디자인 등록증', '디자인 등록증', '디자인 등록증', '디자인 등록증',
+                                '디자인 등록증', '디자인 등록증', '디자인 등록증', '디자인 등록증', '디자인 등록증', '디자인 등록증',
+                                '디자인 등록증',
+                            ]
+                        })
+                    </section>
+                    <section>
+                        <h5 class="sect-tit">실용신안 등록증</h5>
+                        @@include('./modules/img-popup.html', {
+                            img : 'img-sub020301-3',
+                            list : [
+                                '실용신안 등록증', '실용신안 등록증', '실용신안 등록증', '실용신안 등록증'
+                            ]
+                        })
+                    </section>
+                </div>
+            </div>
+            <!-- // page contents -->
+        </div>
+        <!-- // container -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+</body>
+</html>

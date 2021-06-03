@@ -1,0 +1,84 @@
+/* Evience Implant */
+.container.cate02 {
+    // 에비던스임플란트의 특별함
+    .section-wrap {
+        section {
+            margin-top:80px;
+            @include mobile {
+                margin-top:50px;
+            }
+            &:first-child {
+                margin-top:0;
+            }
+            .sect-tit-wrap {
+                margin-bottom:40px;
+                @include mobile {
+                    margin-bottom:25px;
+                }
+            }
+            .sect-tit {
+                @include font-xl;
+                font-weight:700;
+                text-align:center;
+                word-break:keep-all;
+            }
+            .sect-desc {
+                max-width:980px;
+                margin:5px auto 0;
+                text-align:center;
+                @include font-lg;
+                color:$cont;
+                word-break:keep-all;
+                &:first-child {
+                    margin-top:0;
+                }
+            }
+            .img-popup-list {
+                margin-top:20px;
+            }
+            .imgs {
+                margin-top:20px;
+                text-align:center;
+                @include mobile {
+                    margin-top:15px;
+                }
+                .img-caption {
+                    margin-top:10px;
+                    @include font;
+                }
+                span {
+                    display:inline-block;
+                    padding:35px 60px;
+                }
+            }
+        }
+    }
+    // 멸균
+    .sub020305 {
+        display:flex;
+        align-items:center;
+        max-width:1000px;
+        margin:0 auto;
+        padding:30px 35px;
+        border:1px solid $border;
+        @include mobile {
+            flex-direction:column;
+            padding:20px;
+        }
+        .img {
+            display:block;
+            @include calcs(width, 640px, 1000px);
+            text-align:center;
+            @include mobile {
+                width:100%;
+            }
+        }
+        .bullet-list {
+            margin-left:40px;
+            @include mobile {
+                margin-top:20px;
+                margin-left:0;
+            }
+        }
+    }
+}

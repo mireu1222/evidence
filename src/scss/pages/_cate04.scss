@@ -1,0 +1,144 @@
+/* 임상센터 */
+.container.cate04 {
+    // 임상동영상
+    .video-play-wrap {
+        position:relative;
+        width:100%;
+        max-width:920px;
+        margin:0 auto;
+        .video-title {
+            margin-bottom:20px;
+            @include font-title;
+            font-weight:700;
+        }
+        .video {
+            position:relative;
+            width:100%;
+            height:0;
+            @include calcs(padding-top, 9px, 16px);
+            background:#000;
+            overflow:hidden;
+            iframe {
+                position:absolute;
+                top:0;
+                left:0;
+                width:100%;
+                height:100%;
+            }
+        }
+        .video-thumbnail {
+            position:relative;
+            margin-top:50px;
+            padding:0 50px;
+            @include mobile {
+                padding:0 30px;
+            }
+            .video-thumb {
+                display:block;
+                position:relative;
+                width:100%;
+                height:0;
+                @include calcs(padding-top, 9px, 16px);
+                overflow:hidden;
+                img {
+                    position:absolute;
+                    width:100%;
+                    height:auto;
+                    top:50%;
+                    transform:translateY(-50%);
+                }
+                &::before {
+                    content:' ';
+                    position:absolute;
+                    top:50%;
+                    left:50%;
+                    width:60px;
+                    height:60px;
+                    margin-top:-30px;
+                    margin-left:-30px;
+                    border:2px solid $white;
+                    border-radius:50%;
+                    background:rgba(#000, 0.3);
+                    z-index:10;
+                    @include mobile {
+                        width:40px;
+                        height:40px;
+                        margin-top:-20px;
+                        margin-left:-20px;
+                    }
+                }
+                &::after {
+                    content:' ';
+                    position:absolute;
+                    top:50%;
+                    left:50%;
+                    width:0;
+                    height:0;
+                    margin-top:-13px;
+                    margin-left:-8px;
+                    border-left:20px solid $white;
+                    border-top:13px solid transparent;
+                    border-bottom:13px solid transparent;
+                    z-index:11;
+                    @include mobile {
+                        border-left-width:14px;
+                        border-top-width:10px;
+                        border-bottom-width:10px;
+                        margin-top:-10px;
+                        margin-left:-5px;
+                    }
+                }
+                &.selected {
+                    &::before {
+                        border-color:$point;
+                        background:$point;
+                    }
+                }
+            }
+            .swiper-control {
+                position:absolute;
+                top:0;
+                bottom:0;
+                width:30px;
+                cursor:pointer;
+                @include mobile {
+                    width:25px;
+                }
+                &::after {
+                    content:' ';
+                    position:absolute;
+                    top:50%;
+                    width:36px;
+                    height:36px;
+                    margin-top:-18px;
+                    border:2px solid $basic;
+                    border-top:none;
+                    border-right:none;
+                    transition:all 0.15s ease-in-out;
+                    @include mobile {
+                        width:20px;
+                        height:20px;
+                        margin-top:-10px;
+                    }
+                }
+                &.prev {
+                    left:0;
+                    &::after {
+                        left:8px;
+                        transform:rotate(45deg);
+                    }
+                }
+                &.next {
+                    right:0;
+                    &::after {
+                        right:8px;
+                        transform:rotate(-135deg);
+                    }
+                }
+                &.swiper-button-disabled::after {
+                    opacity:0.3;
+                }
+            }
+        }
+    }
+}

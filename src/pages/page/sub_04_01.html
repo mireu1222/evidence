@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html', {
+            cate04 : true
+        })
+        <!-- // header -->
+
+        <!-- container -->
+        <div id="container" class="container cate04">
+            @@include('./layout/page-title.html', {
+                cate04 : true,
+                sub0401 : true,
+                title : '논문 및 포스터'
+            })
+            <!-- page contents -->
+            <div class="contents">
+                <!-- list search -->
+                @@include('./modules/list-filter.html')
+                <!-- // list search -->
+
+                <!-- table -->
+                @@include('./modules/notice-tbl.html', {
+                    total : true,
+                    caption : '논문 및 포스터 리스트',
+                    sub0401type : true,
+                })
+                <!-- // table -->
+
+                <!-- pagination -->
+                @@include('./modules/pagination.html')
+                <!-- // pagination -->
+            </div>
+            <!-- // page contents -->
+        </div>
+        <!-- // container -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+</body>
+</html>

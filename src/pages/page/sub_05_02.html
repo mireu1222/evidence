@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html', {
+            cate05 : true
+        })
+        <!-- // header -->
+
+        <!-- container -->
+        <div id="container" class="container cate05">
+            @@include('./layout/page-title.html', {
+                cate05 : true,
+                sub0502 : true,
+                title : '보도자료'
+            })
+            <!-- page contents -->
+            <div class="contents">
+                <div class="masonry-list-wrap">
+                    <div class="item-wrap">
+                        @@loop('./modules/masonry-list.html', [
+                            {
+                                thumbType: true,
+                                link: '/page/sub_05_02_view.html',
+                                title: '제목이 들어갑니다. 제목은 두줄까지 노출. 말줄임 처리 됨.',
+                                desc: '내용이 들어갑니다. 내용은 다섯줄까지 노출. 말줄임 처리 됨.'
+                            }, 
+                            {
+                                videoType: true,
+                                video: 'https://www.youtube.com/embed/CWdneaQNR70',
+                                title: '동영상 타입. 동영상 제목이 들어감. 클릭 시 modal 뜸.',
+                                desc: '내용이 들어갑니다. 내용은 다섯줄까지 노출. 말줄임 처리 됨.'
+                            },
+                            {
+                                link: '/page/sub_05_02_view.html',
+                                title: '제목이 들어갑니다. 제목은 두줄까지 노출. 말줄임 처리 됨.',
+                                desc: '내용이 들어갑니다. 내용은 다섯줄까지 노출. 말줄임 처리 됨. 내용이 들어갑니다. 내용은 다섯줄까지 노출. 말줄임 처리 됨. 내용이 들어갑니다. 내용은 다섯줄까지 노출. 말줄임 처리 됨. 내용이 들어갑니다. 내용은 다섯줄까지 노출. 말줄임 처리 됨.'
+                            }, 
+                            {
+                                thumbType: true,
+                                link: '/page/sub_05_02_view.html',
+                                title: '제목이 들어갑니다. 제목은 두줄까지 노출. 말줄임 처리 됨.',
+                                desc: '내용이 들어갑니다. 내용은 다섯줄까지 노출. 말줄임 처리 됨.'
+                            }, 
+                            {
+                                videoType: true,
+                                video: 'https://www.youtube.com/embed/CWdneaQNR70',
+                                title: '동영상 타입. 동영상 제목이 들어감. 클릭 시 modal 뜸.',
+                                desc: '내용이 들어갑니다. 내용은 다섯줄까지 노출. 말줄임 처리 됨.'
+                            },
+                            {
+                                link: '/page/sub_05_02_view.html',
+                                title: '제목이 들어갑니다. 제목은 두줄까지 노출. 말줄임 처리 됨.',
+                                desc: '내용이 들어갑니다. 내용은 다섯줄까지 노출. 말줄임 처리 됨. 내용이 들어갑니다. 내용은 다섯줄까지 노출. 말줄임 처리 됨. 내용이 들어갑니다. 내용은 다섯줄까지 노출. 말줄임 처리 됨. 내용이 들어갑니다. 내용은 다섯줄까지 노출. 말줄임 처리 됨.'
+                            }, 
+                        ])
+                    </div>
+                    <!-- nodata -->
+                    <p class="nodata">게시글이 없습니다.</p>
+                    <!-- // nodata -->
+                </div>
+            </div>
+            <!-- // page contents -->
+        </div>
+        <!-- // container -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+        <!-- video modal -->
+        <div id="video" class="video-modal-area" style="display:none;">
+            <div class="video-area">
+                <iframe src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="video-info">
+                <p class="tit"></p>
+                <p class="desc"></p>
+                <p class="date"></p>
+            </div>
+            <button type="button" class="btn-close"><span class="blind">닫기</span></button>
+        </div>
+        <!-- // video modal -->
+    </div>
+    <script>
+        $(function(){
+            $('.masonry-list-wrap .item-wrap').masonry({
+                itemSelector: '.items',
+                percentPosition: true,
+                horizontalOrder: true
+            });
+
+            videoModal();
+        });
+    </script>
+</body>
+</html>

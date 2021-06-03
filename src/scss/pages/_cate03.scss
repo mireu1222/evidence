@@ -1,0 +1,256 @@
+/* 제품소개 */
+.container.cate03 {
+    // intro
+    .product-intro {
+        padding:65px 0 100px;
+        background:$disabled;
+        .cont-area {
+            @include contArea;
+            .link-lists {
+                display:flex;
+                justify-content:space-between;
+                @include tablet {
+                    flex-wrap:wrap;
+                }
+                li {
+                    width:calc((100% - 81px) / 4);
+                    @include tablet {
+                        width:calc((100% - 20px) / 2);
+                        &:nth-child(2) ~ li {
+                            margin-top:20px;
+                        }
+                    }
+                    @include mobile {
+                        width:calc((100% - 10px) / 2);
+                        &:nth-child(2) ~ li {
+                            margin-top:10px;
+                        }
+                    }
+                    a {
+                        display:block;
+                        height:100%;
+                        background:#fff;
+                        box-shadow: 3px 4px 8px 0px rgba(205, 203, 203, 0.75);
+                        @include pc {
+                            &:hover {
+                                .thumb {
+                                    &::before,
+                                    &::after {
+                                        opacity:1;
+                                    }
+                                }
+                            }
+                        }
+                        .thumb {
+                            display:block;
+                            position:relative;
+                            img {
+                                width:100%;
+                            }
+                            &::before {
+                                content:' ';
+                                position:absolute;
+                                top:0;
+                                left:0;
+                                width:100%;
+                                height:100%;
+                                background:rgba(#000, .65);
+                                opacity:0;
+                                transition:opacity 0.2s ease-in-out;
+                            }
+                            &::after {
+                                content:' ';
+                                position:absolute;
+                                top:50%;
+                                left:50%;
+                                width:40px;
+                                height:40px;
+                                margin-top:-20px;
+                                margin-left:-20px;
+                                background:url('/images/bg/bg-more.png') center no-repeat;
+                                background-size:100%;
+                                opacity:0;
+                                transition:opacity 0.2s ease-in-out;
+                            }
+                        }
+                        p {
+                            padding:30px 15px;
+                            font-size:18px;
+                            line-height:30px;
+                            @include mobile {
+                                padding:15px 10px;
+                                font-size:16px;
+                                line-height:20px;
+                                @include skew;
+                                text-align:center;
+                            }
+                            .num {
+                                display:inline-block;
+                                width:30px;
+                                height:30px;
+                                margin-right:10px;
+                                background:$point;
+                                color:$white;
+                                text-align:center;
+                                font-size:18px;
+                                line-height:30px;
+                                vertical-align:top;
+                                @include mobile {
+                                    display:block;
+                                    margin:0 auto 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .prod-intro-wrap {
+        @include clearfix;
+        .prod-name {
+            float:left;
+            @include calcs(width, 250px, 1280px);
+            padding-top:30px;
+            border-top:1px solid $point;
+            color:$point;
+            @include font-title;
+            font-weight:700;
+            small {
+                display:block;
+                @include font-xl;
+                font-weight:400;
+            }
+            @include mobile {
+                float:none;
+                width:auto;
+                margin:0 -12px;
+                padding:10px 12px;
+                border:none;
+                background:$basic;
+                color:$white;
+                text-align:center;
+            }
+        }
+        .prod-cont {
+            @include calcs(margin-left, 320px, 1280px);
+            @include mobile {
+                margin-left:0;
+            }
+            section {
+                margin-top:80px;
+                padding-top:30px;
+                border-top:1px solid $border;
+                @include mobile {
+                    margin-top:30px;
+                    padding-top:20px;
+                    border-top:none;
+                    text-align:center;
+                }
+                &:first-child {
+                    margin-top:0;
+                }
+            }
+            .prod-title {
+                @include font-title;
+                font-weight:700;
+                small {
+                    display:block;
+                    @include font-xl;
+                    font-weight:400;
+                }
+            }
+            .img-wrap {
+                margin-top:50px;
+                &.border {
+                    border-color:$blur !important;
+                    padding:30px 20px;
+                    text-align:center;
+                }
+                @include mobile {
+                    margin-top:20px;
+                }
+            }
+        }
+        &.type2 {
+            @include exmob {
+                .prod-name {
+                    display:none;
+                }
+                .prod-cont {
+                    margin-left:0;
+                    section {
+                        text-align:center;
+                        &:first-child {
+                            border-top:none;
+                        }
+                    }
+                    .img-wrap {
+                        max-width:1000px;
+                        margin-left:auto;
+                        margin-right:auto;
+                    }
+                }
+            }
+        }
+    }
+    .info-text {
+        margin-top:60px;
+        padding:14px 12px;
+        background:$blur;
+        text-align:center;
+        @include font-sm;
+        @include mobile {
+            margin-top:30px;
+        }
+    }
+    // 카타로그
+    .catalog-wrap {
+        position:relative;
+        height:428px;
+        padding:90px 0 0 90px;
+        background-color:#fafafa;
+        background-image:url('/images/bg/bg-sub0304.jpg');
+        background-position:right bottom;
+        background-repeat:no-repeat;
+        background-size:auto 100%;
+        @include tablet {
+            height:330px;
+            padding:50px 0 0 50px;
+            background-position:right -100px bottom;
+        }
+        @include mobile {
+            height:auto;
+            padding:10% 0 70% 20px;
+            background-image:url('/images/bg/bg-sub0304-m.jpg');
+            background-size:100%;
+            background-position:center bottom;
+        }
+        .tit {
+            color:$point;
+            font-size:32px;
+            line-height:42px;
+            letter-spacing:-1px;
+            @include mobile {
+                font-size:28px;
+                line-height:36px;
+            }
+        }
+        .btn {
+            margin-top:35px;
+        }
+        .ex {
+            position:absolute;
+            left:25px;
+            bottom:15px;
+            color:$gray;
+            @include font-sm;
+            @include mobile {
+                left:20px;
+                right:20px;
+                bottom:10px;
+                text-align:center;
+            }
+        }
+    }
+}

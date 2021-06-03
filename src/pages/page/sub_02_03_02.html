@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html', {
+            cate02 : true
+        })
+        <!-- // header -->
+
+        <!-- container -->
+        <div id="container" class="container cate02">
+            @@include('./layout/page-title.html', {
+                cate02 : true,
+                sub0203 : true,
+                title : '에비던스임플란트의 특별함'
+            })
+            <!-- page contents -->
+            <div class="contents">
+                <!-- last depth tab -->
+                @@include('./layout/lastdepth-tab.html', {
+                    cate02 : true,
+                    sub020302 : true,
+                })
+                <!-- // last depth tab -->
+
+                <h4 class="dep-page-title">소재의 선택 및 검증<small>Matter option and Verification</small></h4>
+                
+                <div class="tbl-wrap">
+                    <table class="table col-tbl type2">
+                        <colgroup>
+                            <col style="width:35%">
+                            <col>
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">소재</th>
+                                <th scope="col">검증</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="bg">Titanium</td>
+                                <td>
+                                    <ul class="bullet-list">
+                                        <li>미국 재료 시험 협회 (ASTM F-67 및 F-136) 기준 Titanium 원자재를 사용</li>
+                                        <li>Certificate 관리</li>
+                                        <li>주기적 소재분석 검증</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="bg">RBM 표면처리재</td>
+                                <td>
+                                    <ul class="bullet-list">
+                                        <li>Himed<span class="ft-noto">社</span>(USA)의 표면처리재</li>
+                                        <li>생체내 활성물질 하이드록시아파타이트(HA) 분말 85%이상 함유</li>
+                                        <li>MSDS (Material Safety Data Sheet)로 성분 및 무독성 검증</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="bg">금합금</td>
+                                <td>
+                                    <ul class="bullet-list">
+                                        <li>ISO1562 기준에 의거하여 금, 백금계 귀금속 원소 함유량이 75%이상이며 Gold Abutment에 적합한 물성을 가진 고금합금 (High Noble Gold Alloy)</li>
+                                        <li>성분 : Au + Pt + Pd + Ir</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="bg">플라스틱(Gold주조용)</td>
+                                <td>
+                                    <ul class="bullet-list">
+                                        <li>Dupont<span class="ft-noto">社</span> 수입 원자재 사용</li>
+                                        <li>MSDS (Material Safety Data Sheet) 성분 및 무독성 검증</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="bg">포장재</td>
+                                <td>
+                                    <p class="txt bold">Tyvek</p>
+                                    <ul class="bullet-list">
+                                        <li>Dupont<span class="ft-noto">社</span>의 의료기 전용 수입포장재 사용</li>
+                                        <li>Gamma Radiation Sterilization에 적합한 재질</li>
+                                    </ul>
+                                    <p class="txt bold mt-20">플라스틱(Ample 및 기타)</p>
+                                    <ul class="bullet-list">
+                                        <li>대한약전 제 8개정 일반시험(플라스틱제 의약품 용기시험)에 적합한 소재사용</li>
+                                        <li>Gamma Radiation Sterilization에 적합한 재질</li>
+                                    </ul>
+                                    <p class="mt-20">유효기간 5년 이상의 Accelerated and Real-time Aging Test를 통과한 안전한 재질</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- // page contents -->
+        </div>
+        <!-- // container -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+</body>
+</html>

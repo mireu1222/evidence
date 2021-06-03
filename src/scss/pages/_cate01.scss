@@ -1,0 +1,524 @@
+/* 회사소개 */
+.container.cate01 {
+    // 인사말
+    .greetings {
+        position:relative;
+        padding-right:50%;
+        &::after {
+            content:' ';
+            position:absolute;
+            top:52px;
+            right:0;
+            @include calcs(width, 580px, 1280px);
+            @include calcs(padding-top, 350px, 1280px);
+            background:url('/images/bg/bg-sub0101.jpg') center no-repeat;
+            background-size:100%;
+        }
+        .tit {
+            color:$point;
+            font-size:22px;
+            line-height:25px;
+            font-weight:700;
+            margin-bottom:25px;
+            letter-spacing:-0.8px;
+            @include mobile {
+                font-size:18px;
+                line-height:22px;
+            }
+        }
+        .txt.txt-point {
+            margin-top:30px;
+        }
+        @include mobile {
+            padding-right:0;
+            &::after {
+                display:none;
+            }
+        }
+    }
+    // 비전
+    .vision-wrap {
+        max-width:882px;
+        margin:0 auto;
+        ul {
+            display:flex;
+            justify-content:space-between;
+            @include mobile {
+                flex-direction:column;
+                justify-content:center;
+                width:80%;
+                max-width:300px;
+                margin:0 auto;
+            }
+            li {
+                @include calcs(width, 254px, 882px);
+                text-align:center;
+                @include mobile {
+                    width:100%;
+                    margin-top:40px;
+                    &:first-child {
+                        margin-top:0;
+                    }
+                }
+                .tit {
+                    position:relative;
+                    display:inline-block;
+                    padding:0 8px 2px;
+                    &::before {
+                        content:' ';
+                        position:absolute;
+                        left:0;
+                        right:0;
+                        bottom:0;
+                        height:14px;
+                        background:$blur;
+                    }
+                    span {
+                        position:relative;
+                        color:$point;
+                        font-size:18px;
+                        line-height:1;
+                        font-weight:900;
+                    }
+                }
+                .desc {
+                    position:relative;
+                    margin-top:24px;
+                    width:100%;
+                    height:auto;
+                    padding-top:100%;
+                    border:1px solid $point;
+                    border-radius:50%;
+                    @include mobile {
+                        margin-top:12px;
+                    }
+                    span {
+                        position:absolute;
+                        top:50%;
+                        left:50%;
+                        font-size:16px;
+                        line-height:24px;
+                        font-weight:700;
+                        transform:translate(-50%, -50%) skew(-0.05deg);
+                        white-space:nowrap;
+                        &::before {
+                            content:' ';
+                            display:block;
+                            margin:0 auto 20px;
+                            width:65px;
+                            height:65px;
+                            background-size:100%;
+                            background-repeat:no-repeat;
+                        }
+                        @for $i from 1 through 3 {
+                            &.icon0#{$i}::before {
+                                background-image:url('/images/icon/icon-sub0102-0#{$i}.png');
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // 연혁
+    .history-container {
+        .history-wrap {
+            @include pc {
+                section {
+                    position:relative;
+                    padding-top:40px;
+                    padding-bottom:60px;
+                    &.hide {
+                        display:none;
+                    }
+                    &:first-child {
+                        padding-top:0;
+                    }
+                    &:last-child {
+                        padding-bottom:0;
+                        .month-lists {
+                            position:relative;
+                            &::before {
+                                content:' ';
+                                position:absolute;
+                                right:-1px;
+                                top:10px;
+                                bottom:0;
+                                width:3px;
+                                background:#fff;
+                            }
+                        }
+                    }
+                    &:nth-child(even) {
+                        h5 span {
+                            background:$point2;
+                        }
+                        .month-lists {
+                            margin-right:auto;
+                            li {
+                                @include calcs(padding-right, 150px, 640px);
+                                text-align:right;
+                                span.month {
+                                    @include calcs(right, 100px, 640px);
+                                    color:$point2;
+                                    border-bottom:2px solid $point2;
+                                }
+                                &:first-child {
+                                    &::before {
+                                        right:-8px;
+                                        background:$point2;
+                                    }
+                                    &::after {
+                                        right:4px;
+                                        background:$point2;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &:nth-child(odd) {
+                        h5 span {
+                            background:$point;
+                        }
+                        .month-lists {
+                            margin-left:auto;
+                            li {
+                                @include calcs(padding-left, 150px, 640px);
+                                span.month {
+                                    @include calcs(left, 100px, 640px);
+                                    color:$point;
+                                    border-bottom:2px solid $point;
+                                }
+                                &:first-child {
+                                    &::before {
+                                        left:-7px;
+                                        background:$point;
+                                    }
+                                    &::after {
+                                        left:5px;
+                                        background:$point;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &::before {
+                        content:' ';
+                        position:absolute;
+                        left:50%;
+                        top:0;
+                        bottom:0;
+                        width:1px;
+                        background:$border;
+                    }
+                    h5 {
+                        position:relative;
+                        text-align:center;
+                        span {
+                            display:inline-block;
+                            vertical-align:top;
+                            width:106px;
+                            height:106px;
+                            border-radius:50%;
+                            color:#fff;
+                            font-size:28px;
+                            line-height:106px;
+                            font-weight:700;
+                            @include mobile {
+                                width:80px;
+                                height:80px;
+                                font-size:20px;
+                                line-height:80px;
+                            }
+                        }
+                    }
+                    .month-lists {
+                        width:50%;
+                        margin-top:85px;
+                        li {
+                            position:relative;
+                            margin-top:15px;
+                            color:$cont;
+                            @include font;
+                            word-break:keep-all;
+                            &:first-child {
+                                margin-top:0;
+                            }
+                            span.month {
+                                position:absolute;
+                                top:0;
+                                height:24px;
+                                font-weight:900;
+                            }
+                            p {
+                                margin-top:15px;
+                            }
+                            &:first-child {
+                                &::before {
+                                    content:' ';
+                                    position:absolute;
+                                    top:4px;
+                                    width:15px;
+                                    height:15px;
+                                    border:2px solid $border;
+                                    border-radius:50%;
+                                }
+                                &::after {
+                                    content:' ';
+                                    position:absolute;
+                                    top:11px;
+                                    height:1px;
+                                    @include calcs(width, 80px, 640px);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            @include mobile {
+                section {
+                    position:relative;
+                    margin-top:30px;
+                    padding-left:90px;
+                    &:first-child {
+                        margin-top:0;
+                    }
+                    &.hide {
+                        display:none;
+                    }
+                    h5 {
+                        position:absolute;
+                        top:0;
+                        left:0;
+                        font-size:26px;
+                        line-height:1;
+                        font-weight:900;
+                        color:$point2;
+                        letter-spacing:-1px;
+                    }
+                    .month-lists {
+                        li {
+                            @include clearfix;
+                            font-size:14px;
+                            line-height:22px;
+                            @include skew;
+                            .month {
+                                position:relative;
+                                float:left;
+                                padding-right:10px;
+                                font-weight:900;
+                                color:$gray;
+                                &::after {
+                                    content:' ';
+                                    position:absolute;
+                                    top:4px;
+                                    right:0;
+                                    width:1px;
+                                    height:14px;
+                                    background:$border;
+                                }
+                            }
+                            p {
+                                margin-top:6px;
+                                margin-left:37px;
+                                color:$cont;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .btn-moreview {
+            position:relative;
+            display:block;
+            width:101px;
+            margin:10px auto 0;
+            text-align:center;
+            font-size:16px;
+            line-height:1;
+            font-weight:900;
+            padding-bottom:30px;
+            @include skew;
+            @include mobile {
+                width:100%;
+                margin-top:30px;
+            }
+            &::before {
+                content:' ';
+                position:absolute;
+                bottom:0;
+                left:50%;
+                width:1px; 
+                height:20px;
+                background:$basic;
+            }
+            &::after {
+                content:' ';
+                position:absolute;
+                bottom:0;
+                left:50%;
+                width:13px;
+                height:13px;
+                margin-bottom:3px;
+                margin-left:-6px;
+                border:1px solid $basic;
+                border-top:none;
+                border-left:none;
+                transform:rotate(45deg);
+            }
+        }
+    }
+    // ci/bi
+    .ci-bi-wrap {
+        .box {
+            display:flex;
+            justify-content:space-between;
+            min-height:200px;
+            border:1px solid $border;
+            margin-top:80px;
+            padding:45px 60px;
+            align-items:center;
+            @include mobile {
+                min-height:auto;
+                margin-top:50px;
+                padding:30px 20px;
+            }
+            &:first-child {
+                margin-top:0;
+            }
+            img {
+                margin:0 auto;
+            }
+            @include mobile {
+                > img {
+                    max-width:220px;
+                }       
+            }
+            li {
+                width:48%;
+                text-align:center;
+            }
+        }
+        h5 {
+            margin-top:25px;
+            @include font-title;
+            font-weight:900;
+            @include mobile {
+                margin-top:15px;
+            }
+        }
+        .desc {
+            margin-top:10px;
+            @include font;
+            word-break:keep-all;
+        }
+        .color-list {
+            display:flex;
+            justify-content:space-between;
+            margin-top:10px;
+            @include mobile {
+                display:block;
+            }
+            li {
+                width:48%;
+                max-width:550px;
+                @include mobile {
+                    width:100%;
+                    max-width:100%;
+                    margin-top:10px;
+                }
+            }
+            dl {
+                dt {
+                    @include font-lg;
+                    font-weight:700;
+                }
+                dd {
+                    display:flex;
+                    justify-content:space-between;
+                    margin-top:10px;
+                    font-size:0;
+                    @include mobile {
+                        margin-top:5px;
+                    }
+                    .chip {
+                        position:relative;
+                        height:120px;
+                        @include calcs(width, 250px, 550px);
+                        padding:0 10px;
+                        color:$white;
+                        @include font;
+                        font-weight:700;
+                        text-align:center;
+                        @include mobile {
+                            width:calc((100% - 10px) / 2);
+                        }
+                        span {
+                            position:absolute;
+                            top:50%;
+                            left:10px;
+                            right:10px;
+                            transform:translateY(-50%);
+                        }
+                        &.main01 {
+                            background:$point;
+                        }
+                        &.main02 {
+                            background:$point2;
+                        }
+                        &.sub01 {
+                            background:#808285;
+                        }
+                        &.sub02 {
+                            background:#bcbec0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // 오시는길
+    .way-to-come {
+        .root_daum_roughmap {
+            width:100%;
+            .wrap_map {
+                height:380px;
+                @include mobile {
+                    height:300px;
+                }
+            }
+            .wrap_controllers {
+                display:none;
+            }
+        }
+        .comp-info {
+            border-top:1px solid $basic;
+            dl {
+                border-bottom:1px solid $border;
+                @include clearfix;
+                dt {
+                    float:left;
+                    @include calcs(width, 300px, 1280px);
+                    padding:28px 0;
+                    border-right:1px solid $border;
+                    @include font;
+                    font-weight:700;
+                    text-align:center;
+                    @include mobile {
+                        padding:12px 0;
+                    }
+                }
+                dd {
+                    @include calcs(margin-left, 300px, 1280px);
+                    padding:28px 60px;
+                    @include font;
+                    color:$cont;
+                    font-weight:700;
+                    @include mobile {
+                        padding:12px;
+                    }
+                }
+            }
+        }
+    }
+}

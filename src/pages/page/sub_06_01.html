@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html', {
+            cate06 : true
+        })
+        <!-- // header -->
+
+        <!-- container -->
+        <div id="container" class="container cate06">
+            @@include('./layout/page-title.html', {
+                cate06 : true,
+                sub0601 : true,
+                title : '문의하기'
+            })
+            <!-- page contents -->
+            <div class="contents">
+                @@include('./modules/input-table.html', {
+                    caption : '문의하기',
+                    sub0601type : true,
+                })
+
+                <div class="btn-group">
+                    <input type="reset" class="btn btn-lg btn-border-basic" value="취소">
+                    <button type="button" class="btn btn-lg btn-point">문의하기</button>
+                </div>
+            </div>
+            <!-- // page contents -->
+        </div>
+        <!-- // container -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+</body>
+</html>

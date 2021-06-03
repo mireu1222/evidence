@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html', {
+            cate02 : true
+        })
+        <!-- // header -->
+
+        <!-- container -->
+        <div id="container" class="container cate02">
+            @@include('./layout/page-title.html', {
+                cate02 : true,
+                sub0203 : true,
+                title : '에비던스임플란트의 특별함'
+            })
+            <!-- page contents -->
+            <div class="contents">
+                <!-- last depth tab -->
+                @@include('./layout/lastdepth-tab.html', {
+                    cate02 : true,
+                    sub020304 : true,
+                })
+                <!-- // last depth tab -->
+
+                <h4 class="dep-page-title">세척<small>Washing</small></h4>
+                
+                <div class="section-wrap">
+                    <section>
+                        <div class="sect-tit-wrap">
+                            <h5 class="sect-tit">임플란트 시술의 성공을 위해서는 제품 표면의 청결이 무엇보다도 중요합니다.</h5>
+                            <p class="sect-desc"><span class="text-point">이비아이 세척시스템(Cleaning System)</span>은 일본산업세정협의회(JICC) 및 한국화학시험연구원의 기술지도로 세척공정의 설계, 완성, 검증된 세척시스템을 운용하고 있습니다.<br>특히 초음파세척 공정 후에 용제를 기화시켜 그 증기 로 온도가 낮은 세정물 표면에 응축하여 탈지하는 방법인 증기탈지 공정을 추가함으로서 유기오염원등의 잔류물질을 완벽히 제거한 청결한 제품을 생산하고 있습니다.</p>
+                        </div>
+                        <div class="tbl-wrap">
+                            <table class="table col-tbl type2">
+                                <colgroup>
+                                    <col style="width:50%">
+                                    <col>
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">세척유효성 확인(아래의 방법으로 세척유효성을 확인하였습니다.)</th>
+                                        <th scope="col">기술지도기관</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <ul class="bullet-list">
+                                                <li>FTIR Test 실시(정량적) : 표면 유기오염원검사</li>
+                                                <li>EDS, ESCA Test 실시 : 표면 이물질 검사</li>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <ul class="bullet-list">
+                                                <li>한국화학시험연구원</li>
+                                                <li>일본산업세정협의회 (JICC)</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <!-- // page contents -->
+        </div>
+        <!-- // container -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+</body>
+</html>

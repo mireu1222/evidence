@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html')
+        <!-- // header -->
+
+        <!-- container -->
+        <div id="container" class="container mypage">
+            @@include('./layout/page-title.html', {
+                mypage : true,
+                my02 : true,
+                title : '1:1 문의내역'
+            })
+            <!-- page contents -->
+            <div class="contents">
+                <!-- list -->
+                @@include('./modules/notice-tbl.html', {
+                    caption : '1:1 문의내역',
+                    scroll : true,
+                    mypage02 : true,
+                })
+                <!-- // list -->
+
+                <!-- pagination -->
+                @@include('./modules/pagination.html')
+                <!-- // pagination -->
+
+                <!-- btn -->
+                <div class="board-btn">
+                    <a href="/page/sub_06_01.html" class="btn btn-border-basic">1:1 문의하기</a>
+                </div>
+                <!-- // btn -->
+            </div>
+            <!-- // page contents -->
+        </div>
+        <!-- // container -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+</body>
+</html>

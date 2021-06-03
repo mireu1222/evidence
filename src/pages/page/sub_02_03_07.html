@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html', {
+            cate02 : true
+        })
+        <!-- // header -->
+
+        <!-- container -->
+        <div id="container" class="container cate02">
+            @@include('./layout/page-title.html', {
+                cate02 : true,
+                sub0203 : true,
+                title : '에비던스임플란트의 특별함'
+            })
+            <!-- page contents -->
+            <div class="contents">
+                <!-- last depth tab -->
+                @@include('./layout/lastdepth-tab.html', {
+                    cate02 : true,
+                    sub020307 : true,
+                })
+                <!-- // last depth tab -->
+
+                <h4 class="dep-page-title">작업환경<small>Working environment</small></h4>
+                
+                <div class="section-wrap">
+                    <section>
+                        <div class="tbl-wrap">
+                            <table class="table col-tbl type2">
+                                <colgroup>
+                                    <col>
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">이비아이 작업공간(Clean-Room)의 관리</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1) Class 5,000수준 청정도 관리</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2) 주기적 Filter 교체</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3) 주기적 Particle Test 측정</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4) Clean Room 차압관리(자체 차압계 설치)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5) 온습도 관리</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>6) Clean Room Valldation (ISO14644-1)실시</p>
+                                            <ul class="bullet-list text-cont mt-20">
+                                                <li>환기횟수 측정</li>
+                                                <li>풍량측정</li>
+                                                <li>광기흐름측정</li>
+                                                <li>차압측정</li>
+                                                <li>부유 입자수 측정</li>
+                                                <li>낙하균 측정</li>
+                                                <li>부유균 측정</li>
+                                                <li>온, 습도 측정</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <!-- // page contents -->
+        </div>
+        <!-- // container -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+</body>
+</html>

@@ -1,0 +1,145 @@
+/* footer */
+footer {
+    border-top:2px solid $blur;
+    &.main-type {
+        border-top:none;
+    }
+    .foot-top {
+        padding:25px 0;
+        text-align:center;
+        background-color:$point;
+        background-image:linear-gradient(135deg, rgba(0,111,135,1) 0%, rgba(135,177,189,1) 100%);
+        border-bottom:2px solid $blur;
+        @include mobile {
+            padding:0;
+            border-bottom:none;
+            background-image:none;
+        }
+        .btn {
+            @include mobile {
+                display:block;
+                width:100%;
+                border:none;
+                padding:0;
+                font-size:15px;
+                line-height:40px;
+            }
+            &::after {
+                content:' ';
+                display:inline-block;
+                vertical-align:top;
+                width:20px;
+                height:20px;
+                margin-top:11px;
+                margin-left:20px;
+                border-radius:50%;
+                background:$white url('/images/icon/icon-arrow.jpg') center no-repeat;
+                @include mobile {
+                    width:16px;
+                    height:16px;
+                    margin-top:12px;
+                    margin-left:10px;
+                    background:$white url('/images/icon/icon-call-point.png') center no-repeat;
+                }
+            }
+            @include pc {
+                &:hover,
+                &:active {
+                    color:$white;
+                }
+            }
+        }
+    }
+    .foot-bottom {
+        @include contArea;
+        padding-top:35px;
+        padding-bottom:50px;
+        @include clearfix;
+        @include mobile {
+            padding-top:15px;
+            padding-bottom:30px;
+            text-align:center;
+        }
+        .foot-logo {
+            float:left;
+            @include tablet {
+                float:none;
+                margin-bottom:20px;
+            }
+            @include mobile {
+                margin-bottom:15px;
+                img {
+                    height:25px;
+                }
+            }
+        }
+        .info {
+            margin-left:170px;
+            font-size:0;
+            @include tablet {
+                margin-left:0;
+            }
+            li {
+                display:inline-block;
+                vertical-align:top;
+                margin-bottom:15px;
+                color:$cont;
+                font-size:12px;
+                line-height:1;
+                @include skew;
+                &::before {
+                    content:' '; 
+                    display:inline-block;
+                    width:1px;
+                    height:12px;
+                    margin:0 20px;
+                    background:$cont;
+                    vertical-align:top;
+                    @include mobile {
+                        display:none;
+                    }
+                }
+                &:first-child {
+                    &::before {
+                        display:none;
+                    }
+                }
+                .tit.mob {
+                    display:none;
+                    @include mobile {
+                        display:inline-block;
+                        vertical-align:top;
+                        color:$cont;
+                        margin-right:10px;
+                    }
+                }
+                .tit.pc {
+                    @include mobile {
+                        display:none;
+                    }
+                }
+                @include mobile {
+                    display:block;
+                    margin-bottom:10px;
+                    color:$black;
+                    &.pc {
+                        display:none;
+                    }
+                }
+            }
+        }
+        .copy {
+            margin-left:170px;
+            font-size:12px;
+            line-height:1;
+            color:#a2a2a2;
+            @include skew;
+            @include tablet {
+                margin-left:0;
+            }
+            @include mobile {
+                margin-top:30px;
+            }
+        }
+    }
+}

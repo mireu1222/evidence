@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html', {
+            cate03 : true
+        })
+        <!-- // header -->
+
+        <!-- container -->
+        <div id="container" class="container cate03">
+            @@include('./layout/page-title.html', {
+                cate03 : {
+                    dep2 : '03'
+                },
+                title : 'Solution system'
+            })
+            <!-- page contents -->
+            <div class="contents">
+                @@include('./modules/solution-list.html', {
+                    list : [
+                        {
+                            img : 'img-sub0303-1',
+                            title : 'Cutting Edge Kit'
+                        }, {
+                            img : 'img-sub0303-2',
+                            title : 'Dual Ends Hex Driver'
+                        }, {
+                            img : 'img-sub0303-3',
+                            title : 'One More Drill'
+                        }, {
+                            img : 'img-sub0303-4',
+                            title : 'Implant Remover'
+                        }, {
+                            img : 'img-sub0303-5',
+                            title : 'Immediate Placement Kit'
+                        }, {
+                            img : 'img-sub0303-6',
+                            title : 'SMART Immediate Loading Kit'
+                        }, {
+                            img : 'img-sub0303-7',
+                            title : 'Trans Lingual Curette'
+                        }, {
+                            img : 'img-sub0303-8',
+                            title : 'Ridge Contouring Bur'
+                        }, {
+                            img : 'img-sub0303-9',
+                            title : 'Abutment Remover'
+                        }
+                    ]
+                })
+
+                @@include('./modules/pagination.html')
+            </div>
+            <!-- // page contents -->
+        </div>
+        <!-- // container -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+</body>
+</html>

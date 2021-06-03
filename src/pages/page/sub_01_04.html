@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html', {
+            cate01 : true
+        })
+        <!-- // header -->
+
+        <!-- container -->
+        <div id="container" class="container cate01">
+            @@include('./layout/page-title.html', {
+                cate01 : true,
+                sub0104 : true,
+                title : 'CI/BI'
+            })
+            <!-- page contents -->
+            <div class="contents">
+                <div class="tit-wrap align-center">
+                    <h4 class="tit">에비던스 임플란트의 CI/BI 소개</h4>
+                </div>
+                <div class="ci-bi-wrap">
+                    <div class="box">
+                        <img src="/images/img-ci.jpg" alt="에비던스 CI">
+                    </div>
+                    <h5>심볼마크</h5>
+                    <p class="desc">부드러움을 통한 편안함 그리고 정직하며 안전함을 느끼게 하는 디자인으로 새로운 임플란트 문화를 창조해가는 (주)에비던스 임플란트의 정신을 표현하였고 임플란트 전문회사라는 회사의 정체성을 명확히 하기 위해 영문이니셜 ‘E’ 를 이용해 전문성 및 세계를 향한 발전과 의지를 표현하였고 ‘에비던스 임플란트’ 라는 명사화된 한 단어로 에비던스 임플란트=임플란트라는 이미지를 전달하고자 하였다.</p>
+                    <ul class="box">
+                        <li><img src="/images/img-color-ci.jpg" alt="에비던스 컬러 CI"></li>
+                        <li><img src="/images/img-mono-ci.jpg" alt="에비던스 흑백 CI"></li>
+                    </ul>
+                    <h5>컬러</h5>
+                    <ul class="color-list">
+                        <li>
+                            <dl>
+                                <dt>Main Color</dt>
+                                <dd>
+                                    <div class="chip main01"><span>PANTONE 315 C<br>C90 + M35 + Y30 + K20</span></div>
+                                    <div class="chip main02"><span>PANTONE 7546 C<br>C77 + M61 + Y48 + K50</span></div>
+                                </dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt>Sub Color</dt>
+                                <dd>
+                                    <div class="chip sub01"><span>EBI Dark Gray<br>PANTONE 424 C<br>K60</span></div>
+                                    <div class="chip sub02"><span>EBI Light Gray<br>PANTONE 421 C<br>K30</span></div>
+                                </dd>
+                            </dl>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- // page contents -->
+        </div>
+        <!-- // container -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+</body>
+</html>

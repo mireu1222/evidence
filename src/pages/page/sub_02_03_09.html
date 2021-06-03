@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html', {
+            cate02 : true
+        })
+        <!-- // header -->
+
+        <!-- container -->
+        <div id="container" class="container cate02">
+            @@include('./layout/page-title.html', {
+                cate02 : true,
+                sub0203 : true,
+                title : '에비던스임플란트의 특별함'
+            })
+            <!-- page contents -->
+            <div class="contents">
+                <!-- last depth tab -->
+                @@include('./layout/lastdepth-tab.html', {
+                    cate02 : true,
+                    sub020309 : true,
+                })
+                <!-- // last depth tab -->
+
+                <h4 class="dep-page-title">가공기술<small>Processing art</small></h4>
+                
+                <div class="section-wrap">
+                    <section>
+                        <div class="sect-tit-wrap">
+                            <h5 class="sect-tit">Fixture & Solid-Abutment 체결 정밀적합도 전자현미경 관찰</h5>
+                        </div>
+                        <div class="tbl-wrap">
+                            <table class="table row-tbl type2">
+                                <colgroup>
+                                    <col class="col2">
+                                    <col>
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1. 시험목적</th>
+                                        <td>스위스 S(I**)사 Fixture, Solid-Abutment와 자사의 임플란트인 이비아이 Fixture, Solid-Abutment와의 기계적 정밀적합도 비교.</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2. 시험방법 및 관찰부분</th>
+                                        <td>
+                                            1) 시험방법 : Fixture, Solid-Abutment 체결. 절단 후 전자현미경으로 정밀적합도 관찰<br>
+                                            2) 관찰부분 : Morse Tapper상부 좌.우, Octa 아래 Morse Tapper하부 좌.우, 나사체결부
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3. 시편제작 및 시험순서</th>
+                                        <td>
+                                            1) 시료준비 : Fixture Φ4.8 식립깊이 8mm, Solid-Abutment Height 5.5mm<br>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;① 스위스 S(I**)사 Fixture(043.****), Solid-Abutment(048.***) 각 1개<br>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;② 이비아이 Fixture(IRA4808), Solid-Abutment(SSAR55) 각 2개(자사 포장제품 임의선택 제품)<br>
+                                            2) 체결 : Fixture, Solid-Abutment를 각Torque 35Ncm으로 체결<br>
+                                            3) Mounting<br>
+                                            4) Cutting<br>
+                                            5) Lapping & Polishing<br>
+                                            6) 측정표면 백금(Platinum) 증착.<br>
+                                            7) 전자현미경 관찰.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">4. 측정 및 사용장비</th>
+                                        <td>
+                                            1) Fixture, Solid-Abutment Torque 35Ncm 체결 : TOHNICHI-6BTG. JAPAN<br>
+                                            2) Mounting : BUEHLER LTD-SIMPLIMET 3000. USA<br>
+                                            3) Cutting : BUEHLER LTD-ISOET 4000. USA<br>
+                                            4) Lapping & Polishing : BUEHLER LTD-TECHMET TABLE WITH ECOMET. USA<br>
+                                            5) 전자현미경 : HITACH-S4300. JAPAN
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">5. 시험기관</th>
+                                        <td>대구기계부품 연구원</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">6. 시험일자</th>
+                                        <td>2006년 10월 18일</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">7. 시험결과</th>
+                                        <td>
+                                            <p class="text-point fw-bold mb-20">* 하단의 시험결과를 클릭하시면 해당하는 결과가 보여집니다.</p>
+                                            <ul class="ccbtn-tab-wraps" data-toggle="class-toggle">
+                                                <li>
+                                                    <button type="button" data-toggle="modal" data-target="#modal-result1">
+                                                        <span>
+                                                            <em>01</em>
+                                                            LEFT - 4.8 NECK내측 <br>MORSE TAPPER <br>상부
+                                                        </span>
+                                                    </button>
+                                                </li>
+                                                <li>
+                                                    <button type="button" data-toggle="modal" data-target="#modal-result2">
+                                                        <span>
+                                                            <em>02</em>
+                                                            LEFT - OCTA아래 <br>MORSE TAPPER <br>접점부
+                                                        </span>
+                                                    </button>
+                                                </li>
+                                                <li>
+                                                    <button type="button" data-toggle="modal" data-target="#modal-result3">
+                                                        <span>
+                                                            <em>03</em>
+                                                            RIGHT - 4.8 NECK내측 <br>MORSE TAPPER <br>상부
+                                                        </span>
+                                                    </button>
+                                                </li>
+                                                <li>
+                                                    <button type="button" data-toggle="modal" data-target="#modal-result4">
+                                                        <span>
+                                                            <em>04</em>
+                                                            RIGHT - OCTA아래<br>MORSE TAPPER<br>접점부
+                                                        </span>
+                                                    </button>
+                                                </li>
+                                                <li>
+                                                    <button type="button" data-toggle="modal" data-target="#modal-result5">
+                                                        <span>
+                                                            <em>01</em>
+                                                            나사체결부
+                                                        </span>
+                                                    </button>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <!-- // page contents -->
+        </div>
+        <!-- // container -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+
+    <!-- modal -->
+    @@include('./modules/modal.html', {
+        id : 'modal-result1'
+    })
+    @@include('./modules/modal.html', {
+        id : 'modal-result2'
+    })
+    @@include('./modules/modal.html', {
+        id : 'modal-result3'
+    })
+    @@include('./modules/modal.html', {
+        id : 'modal-result4'
+    })
+    @@include('./modules/modal.html', {
+        id : 'modal-result5'
+    })
+    <!-- // modal -->
+</body>
+</html>

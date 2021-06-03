@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html')
+        <!-- // header -->
+
+        <!-- main fullpage -->
+        <div id="main" class="main">
+            <!-- section01 -->
+            <div class="section section01 fp-table">
+                <div class="fp-tableCell">
+                    <div class="sect-title">
+                        <h2>기본에 충실한 <br>에비던스임플란트</h2>
+                        <p class="desc">오랜기간 연구와 특허를 통한 안전한 임플란트</p>
+                    </div>
+                </div>
+            </div>
+            <!-- // section01 -->
+            <!-- section02 -->
+            <div class="section section02">
+                <div class="hover-visual-wrap">
+                    <div class="col col01" data-order="first">
+                        <div class="inner">
+                            Cleaning <br>System
+                        </div>
+                    </div>
+                    <div class="col col02" data-order="second">
+                        <div class="inner">
+                            전세계 수출
+                        </div>
+                    </div>
+                    <div class="col col03" data-order="third">
+                        <div class="inner">
+                            연구개발비 <br>매출 10%
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- // section02 -->
+            <!-- section03 -->
+            <div class="section section03">
+                <div class="hover-visual-wrap">
+                    <div class="col col04" data-order="first">
+                        <div class="inner">
+                            Implant <br>system
+                        </div>
+                    </div>
+                    <div class="col col05" data-order="second">
+                        <div class="inner">
+                            Surgical <br>Kit
+                        </div>
+                    </div>
+                    <div class="col col06" data-order="third">
+                        <div class="inner">
+                            Solution <br>system
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- // section03 -->
+            <!-- section04 -->
+            <div class="section section04 fp-table">
+                <div class="fp-tableCell">
+                    <div class="sect-title">
+                        <h2>끊임없는 연구개발의 산물</h2>
+                        <p class="desc">2002년부터 일반로컬/여러대학의 협업으로 인간에게 보다 안전한 임플란트 개발</p>
+                    </div>
+                </div>
+            </div>
+            <!-- // section04 -->
+            <!-- section05 -->
+            <div class="section section05 fp-table">
+                <div class="fp-tableCell">
+                    <div class="sect-title">
+                        <h2>EVIDENCE NEWS</h2>
+                        <p class="desc">에비던스임플란트에서 소식을 전해드립니다.</p>
+                    </div>
+                    <div class="link-list-wrap">
+                        <ul class="link-list">
+                            <li><a href="" class="link01">보도자료</a></li>
+                            <li><a href="" class="link02">행사 갤러리</a></li>
+                            <li><a href="" class="link03">공지&amp;뉴스</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- // section05 -->
+            <!-- footer -->
+            @@include('./layout/footer.html', {
+                main : true
+            })
+            <!-- // footer -->
+        </div>
+        <!-- // main fullpage -->
+
+        <!-- fixed object -->
+        <div class="main-scroll" aria-hidden="true">Scroll</div>
+        <div class="main-flt-btns">
+            <a href="/page/sub_06_01.html" class="btn btn-white rounded btn-quick-contact"><span>빠른 상담문의</span></a>
+            <button type="button" aria-label="페이지 상단으로 이동" class="main-to-top" style="display:none;"></button>
+        </div>
+        <!-- // fixed object -->
+    </div>
+    <script>
+        $(function(){
+            // fullpage
+            var mainFullpage = new fullpage('#main', {
+                css3: true,
+                navigation: true,
+                navigaionPosition: 'right',
+                responsiveWidth: 1025,
+                verticalCentered: false,
+                onLeave: function(origin, destination, direction){
+                    if(origin.index == 0){
+                        $('#header').addClass('scroll');
+                        $('.main-flt-btns .main-to-top').show();
+                    } else if(destination.index == 0) {
+                        $('#header').removeClass('scroll');
+                        $('.main-flt-btns .main-to-top').hide();
+                    }  
+                    if(destination.index == 5) {
+                        $('.main-flt-btns .btn-quick-contact').hide();
+                        $('.main-scroll').hide();
+                    } else if(origin.index == 5){
+                        $('.main-flt-btns .btn-quick-contact').show();
+                        $('.main-scroll').show();
+                    }
+                }
+            });
+            $(document).on('click', '.main-to-top', function(){
+                mainFullpage.moveTo(1)
+            });
+
+            // hover effect
+            $('.hover-visual-wrap .col').hover(function(){
+                var col = $(this),
+                    wrap = col.parent('.hover-visual-wrap'),
+                    order = col.data('order');
+
+                if(order=='first'){
+                    wrap.toggleClass('col-fst-on');
+                } else if(order=='second'){
+                    wrap.toggleClass('col-scd-on');
+                } else if(order=='third'){
+                    wrap.toggleClass('col-thd-on');
+                }
+            });
+        })
+    </script>
+</body>
+</html>

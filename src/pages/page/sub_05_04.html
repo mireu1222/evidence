@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html', {
+            cate05 : true
+        })
+        <!-- // header -->
+
+        <!-- container -->
+        <div id="container" class="container cate05">
+            @@include('./layout/page-title.html', {
+                cate05 : true,
+                sub0504 : true,
+                title : '동영상갤러리'
+            })
+            <!-- page contents -->
+            <div class="contents">
+                @@include('./modules/thumb-list.html', {
+                    videoType: true,
+                    lists: [
+                        {
+                            video: 'https://www.youtube.com/embed/CWdneaQNR70',
+                            title: '제목이 들어갑니다.',
+                            desc: '내용이 들어갑니다.'
+                        }, {
+                            video: 'https://www.youtube.com/embed/CWdneaQNR70',
+                            title: '제목이 들어갑니다.',
+                            desc: '내용이 들어갑니다.'
+                        }, {
+                            video: 'https://www.youtube.com/embed/CWdneaQNR70',
+                            title: '제목이 들어갑니다.',
+                            desc: '내용이 들어갑니다.'
+                        }, {
+                            video: 'https://www.youtube.com/embed/CWdneaQNR70',
+                            title: '제목이 들어갑니다.',
+                            desc: '내용이 들어갑니다.'
+                        }
+                    ]
+                })
+
+                @@include('./modules/pagination.html')
+            </div>
+            <!-- // page contents -->
+        </div>
+        <!-- // container -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+        <!-- video modal -->
+        <div id="video" class="video-modal-area" style="display:none;">
+            <div class="video-area">
+                <iframe src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="video-info">
+                <p class="tit"></p>
+                <p class="desc"></p>
+                <p class="date"></p>
+            </div>
+            <button type="button" class="btn-close"><span class="blind">닫기</span></button>
+        </div>
+        <!-- // video modal -->
+    </div>
+    <script>
+        $(function(){
+            videoModal();
+        });
+    </script>
+</body>
+</html>

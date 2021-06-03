@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html', {
+            cate04 : true
+        })
+        <!-- // header -->
+
+        <!-- container -->
+        <div id="container" class="container cate04">
+            @@include('./layout/page-title.html', {
+                cate04 : true,
+                sub0402 : true,
+                title : '임상동영상'
+            })
+            <!-- page contents -->
+            <div class="contents">
+                <div class="video-play-wrap">
+                    <!-- Video Play  ?controls=0 -->
+                    <p class="video-title">동영상 제목</p>
+                    <div class="video">
+                        <iframe src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <!-- // Video Play -->
+                    <!-- Video thumbnail slider -->
+                    <div class="video-thumbnail">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a href="https://www.youtube.com/embed/phGmnmfdGmA" class="video-thumb" data-title="Cutting Edge Kit"><!-- 동영상 주소, 타이틀 불러옴 -->
+                                        <img src="/images/@thumb.gif" alt="동영상 썸네일 이미지"><!-- 동영상 썸네일 불러옴 -->
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="https://www.youtube.com/embed/BONbe2HwQgs" class="video-thumb" data-title="Cutting Edge Kit2"><!-- 동영상 주소, 타이틀 불러옴 -->
+                                        <img src="/images/@thumb.gif" alt="동영상 썸네일 이미지"><!-- 동영상 썸네일 불러옴 -->
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="https://www.youtube.com/embed/0XFQ3r_YeaU" class="video-thumb" data-title="Cutting Edge Kit3"><!-- 동영상 주소, 타이틀 불러옴 -->
+                                        <img src="/images/@thumb.gif" alt="동영상 썸네일 이미지"><!-- 동영상 썸네일 불러옴 -->
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="https://www.youtube.com/embed/phGmnmfdGmA" class="video-thumb" data-title="Cutting Edge Kit4"><!-- 동영상 주소, 타이틀 불러옴 -->
+                                        <img src="/images/@thumb.gif" alt="동영상 썸네일 이미지"><!-- 동영상 썸네일 불러옴 -->
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="https://www.youtube.com/embed/BONbe2HwQgs" class="video-thumb" data-title="Cutting Edge Kit5"><!-- 동영상 주소, 타이틀 불러옴 -->
+                                        <img src="/images/@thumb.gif" alt="동영상 썸네일 이미지"><!-- 동영상 썸네일 불러옴 -->
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="https://www.youtube.com/embed/0XFQ3r_YeaU" class="video-thumb" data-title="Cutting Edge Kit6"><!-- 동영상 주소, 타이틀 불러옴 -->
+                                        <img src="/images/@thumb.gif" alt="동영상 썸네일 이미지"><!-- 동영상 썸네일 불러옴 -->
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-control prev"><span class="blind">Prev</span></div>
+                        <div class="swiper-control next"><span class="blind">Next</span></div>
+                    </div>
+                    <!-- // Video thumbnail slider -->
+                </div>
+            </div>
+            <!-- // page contents -->
+        </div>
+        <!-- // container -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+
+    <script>
+        var swiper = new Swiper('.video-thumbnail .swiper-container', {
+            slidesPerView: 2,
+            spaceBetween: 10,
+            navigation: {
+                nextEl: '.video-thumbnail .swiper-control.next',
+                prevEl: '.video-thumbnail .swiper-control.prev'
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                }
+            }
+        });
+
+        $('.video-thumbnail .video-thumb').on('click', function(e){
+            var thumb = $(this),
+                all = $('.video-thumbnail .video-thumb'),
+                videoSrc = thumb.attr('href'),
+                videoTitle = thumb.data('title'),
+                videoArea = $('.video-play-wrap .video iframe'),
+                titleArea = $('.video-play-wrap .video-title');
+
+            e.preventDefault();
+            all.removeClass('selected');
+            thumb.addClass('selected');
+            videoArea.attr('src', videoSrc+'?controls=0');
+            titleArea.text(videoTitle);
+        });
+        $('.video-thumbnail .swiper-slide:first-child .video-thumb').click();
+    </script>
+</body>
+</html>

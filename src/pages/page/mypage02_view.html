@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html')
+        <!-- // header -->
+
+        <!-- container -->
+        <div id="container" class="container mypage">
+            @@include('./layout/page-title.html', {
+                mypage : true,
+                my02 : true,
+                title : '1:1 문의내역'
+            })
+            <!-- page contents -->
+            <div class="contents">
+                <div class="boardview-wrap qna-type">
+                    <!-- 질문 -->
+                    <div class="q-box">
+                        <!-- title -->
+                        <div class="board-head">
+                            <p class="tit"><span class="blind">제목</span>질문 제목이 노출됩니다.</p>
+                            <ul class="info">
+                                <li><span class="blind">작성일</span>2021-02-12</li>
+                            </ul>
+                        </div>
+                        <!-- // title -->
+                        <!-- content -->
+                        <div class="board-content">
+                            <div class="cont">
+                                질문 내용이 노출됩니다.<br>
+                                질문 내용이 노출됩니다.<br>
+                                질문 내용이 노출됩니다.<br>
+                                질문 내용이 노출됩니다.<br>
+                                질문 내용이 노출됩니다.<br>
+                                질문 내용이 노출됩니다.<br>
+                                질문 내용이 노출됩니다.
+                            </div>
+                        </div>
+                        <!-- // content -->
+                    </div>
+                    <!-- // 질문 -->
+                    <!-- 답변 (처리중일 때 DOM 삭제) -->
+                    <div class="a-box">
+                        <!-- title -->
+                        <div class="board-head">
+                            <p class="tit"><span class="blind">제목</span>답변 제목이 노출됩니다.</p>
+                            <ul class="info">
+                                <li><span class="blind">작성일</span>2021-02-12</li>
+                            </ul>
+                        </div>
+                        <!-- // title -->
+                        <!-- content -->
+                        <div class="board-content">
+                            <div class="cont">
+                                답변 내용이 노출됩니다.<br>
+                                답변 내용이 노출됩니다.<br>
+                                답변 내용이 노출됩니다.<br>
+                                답변 내용이 노출됩니다.<br>
+                                답변 내용이 노출됩니다.<br>
+                                답변 내용이 노출됩니다.<br>
+                                답변 내용이 노출됩니다.
+                            </div>
+                        </div>
+                        <!-- // content -->
+                    </div>
+                    <!-- // 답변 (처리중일 때 DOM 삭제) -->
+                    <div class="btn-group">
+                        <a href="/page/mypage02.html" class="btn btn-lg btn-point">목록</a>
+                    </div>
+                </div>
+            </div>
+            <!-- // page contents -->
+        </div>
+        <!-- // container -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+</body>
+</html>

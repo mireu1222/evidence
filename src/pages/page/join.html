@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html')
+        <!-- // header -->
+
+        <!-- container -->
+        <div id="container" class="container member">
+            @@include('./layout/page-title.html', {
+                member : true,
+                title : '회원가입'
+            })
+            <!-- page contents -->
+            <div class="contents">
+                <div class="tit-wrap align-center">
+                    <h3 class="tit">MEMBER JOIN</h3>
+                    <p class="desc">회원가입하고 다양한 혜택을 누리세요!</p>
+                </div>
+                <form action="">
+                    <div class="form-wrap join-type">
+                        <div class="row">
+                            <input type="text" class="form-control" placeholder="이름(실명)" title="이름 입력">
+                        </div>
+                        <p class="err-msg">에러메시지 출력</p>
+                        <div class="row">
+                            <input type="text" class="form-control" placeholder="아이디(6~20자의 영문 소문자, 숫자)" title="6~20자의 영문 소문자, 숫자로 이루어진 아이디 입력" maxlength="20">
+                            <button type="button" class="btn btn-basic">중복체크</button>
+                        </div>
+                        <p class="err-msg">에러메시지 출력</p>
+                        <div class="row">
+                            <input type="password" class="form-control" placeholder="비밀번호(6~12자의 영문, 숫자, 특수기호)" title="6~12자의 영문, 숫자, 특수기호가 들어간 비밀번호 입력" maxlength="12">
+                        </div>
+                        <p class="err-msg">에러메시지 출력</p>
+                        <div class="row">
+                            <input type="password" class="form-control" placeholder="비밀번호 확인" title="비밀번호 동일하게 재입력">
+                        </div>
+                        <p class="err-msg">에러메시지 출력</p>
+                        <div class="row">
+                            <input type="text" class="form-control" placeholder="이메일" title="이메일 주소 입력">
+                            <button type="button" class="btn btn-basic">중복체크</button>
+                        </div>
+                        <p class="err-msg">에러메시지 출력</p>
+                        <div class="row">
+                            <input type="text" class="form-control" placeholder="휴대폰 번호" title="휴대폰번호 입력" maxlength="11">
+                        </div>
+                        <p class="err-msg">에러메시지 출력</p>
+                    </div>
+                    <div class="join-agree-cont">
+                        <h4 class="tit">약관 동의</h4>
+                        <div class="cont" data-toggle="allChk">
+                            <div class="all">
+                                <span class="chk-wrap">
+                                    <input type="checkbox" id="agree-all" class="chk-all" name="agree">
+                                    <label for="agree-all">모두 동의합니다.</label>
+                                </span>
+                                <p>필수동의 항목 및 마케팅 정보 수신(선택)에 모두 동의합니다.</p>
+                            </div>
+                            <ul class="agrees">
+                                <li>
+                                    <span class="chk-wrap">
+                                        <input type="checkbox" id="agree-01" name="agree">
+                                        <label for="agree-01">[필수] 이용약관 동의</label>
+                                    </span>
+                                    <a href="#terms01" class="link-cont" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="terms01"><span>보기</span></a>
+                                    <div id="terms01" class="terms-box">
+                                        약관 내용이 들어갑니다.<br>
+                                        약관 내용이 들어갑니다.<br>
+                                        약관 내용이 들어갑니다.<br>
+                                        약관 내용이 들어갑니다.<br>
+                                        약관 내용이 들어갑니다.
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="chk-wrap">
+                                        <input type="checkbox" id="agree-02" name="agree">
+                                        <label for="agree-02">[필수] 개인정보 수집 및 이용동의</label>
+                                    </span>
+                                    <a href="#terms02" class="link-cont" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="terms02"><span>보기</span></a>
+                                    <div id="terms02" class="terms-box">
+                                        약관 내용이 들어갑니다.<br>
+                                        약관 내용이 들어갑니다.<br>
+                                        약관 내용이 들어갑니다.<br>
+                                        약관 내용이 들어갑니다.<br>
+                                        약관 내용이 들어갑니다.
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="chk-wrap">
+                                        <input type="checkbox" id="agree-03" name="agree">
+                                        <label for="agree-03">[선택] 마케팅 정보 이메일 수신 동의</label>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="chk-wrap">
+                                        <input type="checkbox" id="agree-04" name="agree">
+                                        <label for="agree-04">[선택] 마케팅 정보 SMS 수신 동의</label>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="btn-group">
+                        <!-- <button type="submit" class="btn btn-lg btn-point">회원가입</button> -->
+                        <button type="button" class="btn btn-lg btn-point" onClick="location.href='/page/join-complete.html'">회원가입</button>
+                    </div>
+                </form>
+            </div>
+            <!-- // page contents -->
+        </div>
+        <!-- // container -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+</body>
+</html>

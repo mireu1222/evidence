@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html', {
+            cate02 : true
+        })
+        <!-- // header -->
+
+        <!-- container -->
+        <div id="container" class="container cate02">
+            @@include('./layout/page-title.html', {
+                cate02 : true,
+                sub0203 : true,
+                title : '에비던스임플란트의 특별함'
+            })
+            <!-- page contents -->
+            <div class="contents">
+                <!-- last depth tab -->
+                @@include('./layout/lastdepth-tab.html', {
+                    cate02 : true,
+                    sub020306 : true,
+                })
+                <!-- // last depth tab -->
+
+                <h4 class="dep-page-title">포장<small>Packing</small></h4>
+                
+                <div class="section-wrap">
+                    <section>
+                        <div class="sect-tit-wrap">
+                            <p class="sect-desc">플라스틱 포장재료에 대한 시험<br>(대한약전 제 8개정 일반시험법 - 플라스틱제 의학품 용기 시험법 용출물)을 실시 하였습니다.</p>
+                        </div>
+                        <div class="tbl-wrap">
+                            <table class="table col-tbl type2">
+                                <colgroup>
+                                    <col style="width:35%">
+                                    <col>
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col" colspan="2">검액제조 : 대상물 4g / 증류수 20ml hds도 50± 2 ℃에서 72시간 용출</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="bg">1) 성상시험</td>
+                                        <td>검액이 무색투명하고 이물질이 관찰되지 않아야 한다.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="bg">2) 중금속시험</td>
+                                        <td>검액의 색이 비교액 보다 진하지 않아야 한다.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="bg">3) PH검사</td>
+                                        <td>검액과 공시험액차 pH1.5이하</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="bg">4) 과잉간산칼륨 소비량검사</td>
+                                        <td>2.0ml이하</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="bg">5) 잔류물검사</td>
+                                        <td>검액 20ml 증발시 1.0mg이하</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="bg">6) 흡광도검사</td>
+                                        <td>검액 250nm~350nm의 흡광도 0 .1이하</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <!-- // page contents -->
+        </div>
+        <!-- // container -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+</body>
+</html>

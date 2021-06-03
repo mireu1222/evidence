@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html', {
+            cate02 : true
+        })
+        <!-- // header -->
+
+        <!-- container -->
+        <div id="container" class="container cate02">
+            @@include('./layout/page-title.html', {
+                cate02 : true,
+                sub0203 : true,
+                title : '에비던스임플란트의 특별함'
+            })
+            <!-- page contents -->
+            <div class="contents">
+                <!-- last depth tab -->
+                @@include('./layout/lastdepth-tab.html', {
+                    cate02 : true,
+                    sub020310 : true,
+                })
+                <!-- // last depth tab -->
+
+                <h4 class="dep-page-title">제품검증<small>Official approval</small></h4>
+                
+                <div class="section-wrap">
+                    <section>
+                        <div class="tbl-wrap">
+                            <table class="table col-tbl type2">
+                                <colgroup>
+                                    <col style="width:35%">
+                                    <col>
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col" colspan="2">(1) Biological Test</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row" class="bg">세포독성시험<br>(ISO10993-5)</th>
+                                        <td>Fixture 용출액에 대한 세포독성시험을 실시한 경과 세포 독성이 없음을 확인했습니다.</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="bg">감작성시험<br>(ISO 10993-10)</th>
+                                        <td>접촉 감작성을 평가하는 시험에서 홍반 및 부종이 관찰되지 않았으며, allergy나 감작반응에 무해함을 확인했습니다.</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="bg">피내반응시험<br>(ISO10993-10)</th>
+                                        <td>조직의 국부반응을 평가하는 시험에서 홍반 및 부종이 관찰되지 않아 인체에 무해함을 확인했습니다.</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="bg">이식시험<br>(ISO10993-6)</th>
+                                        <td>동물에 이식 후 조직학적인 평가에 있어서 어떠한 염증이나 이물반응을 나타내지 않았으며, 시험군에 대한 조직 및 골융합성의 적합성을 확인했습니다.</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="bg">급독성시험<br>(비경구- I.V route)(ISO10993-11)</th>
+                                        <td>용출액 주사 직후와 주사 후 4, 24, 48, 72시간째 부작용을 관찰하고 주입 후와 72시간 후 체중을 측정한다. 두 마리 이상의 쥐가 죽거나 3마리 이상의 쥐에서 2g이상의 체중감소, 2마리 이상의 쥐에서 경련 등이 나타나면 불합격한 것으로 보는 시험을 확인했습니다.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="tbl-wrap">
+                            <table class="table col-tbl type2">
+                                <colgroup>
+                                    <col style="width:35%">
+                                    <col>
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col" colspan="2">(2) Mechanical Test</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row" class="bg">피로도 시험</th>
+                                        <td>ISO14081(2003)의 시험방법에 따라 피로한도를 측정하여 제품의 신뢰성을 확보하고 있습니다.<br>
+                                            (시험기준 : 5,000,000cycle을 넘기는 피로한도 250N 이상)</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="bg">정밀적합도 시험</th>
+                                        <td>Implant와 Abutment를 결합 후 접함 부위의 유격이 평균 5.2㎛ 이하로 측정되었습니다.<br>
+                                            (시험기준 : 10㎛이하)</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="bg">회전각시험</th>
+                                        <td>Implant와 Abutment를 결합하여 회전각을 측정한 결과 우 : 평균 2.56도, 좌 : 2.50도로 측정되었습니다.<br>
+                                            (시험기준 : 3도 이하)</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="bg">풀림토크</th>
+                                        <td>Implant와 Screw의 풀림정도를 측정하기 위해 30Ncm로 조인 후 측정한 결과 평균 26.29Ncm로 측정되었습니다.<br>
+                                            (시험기준 : 조임 토크의 70% 이상)</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="bg">회전전단강도</th>
+                                        <td>Implant와 Abutment를 Screw로 조여서 변형, 파단까지의 강도를 측정한 결과 평균 62.89Ncm에서 이상이 없었습니다.<br>
+                                            (사용한도 : 45Ncm 이상)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <!-- // page contents -->
+        </div>
+        <!-- // container -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+</body>
+</html>

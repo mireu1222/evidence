@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html', {
+            cate01 : true
+        })
+        <!-- // header -->
+
+        <!-- container -->
+        <div id="container" class="container cate01">
+            @@include('./layout/page-title.html', {
+                cate01 : true,
+                sub0105 : true,
+                title : '수상/인증'
+            })
+            <!-- page contents -->
+            <div class="contents">
+                <div class="tit-wrap align-center">
+                    <h4 class="tit">에비던스 임플란트의 수상 및 인증</h4>
+                </div>
+                
+                @@include('./modules/img-popup.html', {
+                    img : 'img-sub0105',
+                    list : [
+                        '수출유망중소기업지정증',
+                        '경상북도중소기업대상', '기업부설연구소 인정서',
+                        '벤처기업확인서', '유망중소기업 선정서', 'Full Quality Assurance',
+                        '510(k) Premarket Notification', 'Certificate of Registration',
+                        '의료기기 제조 및 품질관리기준 적합인정서', 'The Director of the United States Patent and Trademark Office'
+                    ]
+                })
+            </div>
+            <!-- // page contents -->
+        </div>
+        <!-- // container -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+</body>
+</html>

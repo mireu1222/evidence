@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html', {
+            cate02 : true
+        })
+        <!-- // header -->
+
+        <!-- container -->
+        <div id="container" class="container cate02">
+            @@include('./layout/page-title.html', {
+                cate02 : true,
+                sub0203 : true,
+                title : '에비던스임플란트의 특별함'
+            })
+            <!-- page contents -->
+            <div class="contents">
+                <!-- last depth tab -->
+                @@include('./layout/lastdepth-tab.html', {
+                    cate02 : true,
+                    sub020305 : true,
+                })
+                <!-- // last depth tab -->
+
+                <h4 class="dep-page-title">멸균<small>Sterilization</small></h4>
+                
+                <div class="section-wrap">
+                    <section>
+                        <div class="sub020305">
+                            <span class="img">
+                                <img src="/images/img-sub020305.gif" alt="">
+                            </span>
+                            <ul class="bullet-list dot">
+                                <li>방사선 γ-ray 멸균</li>
+                                <li>SAL : 10-<sup>6</sup> 멸균보증</li>
+                                <li>ISO 11137 Method에 의한 멸균 선량검증(25kGy ~ 45kGy)</li>
+                                <li>FDA등록 및 ISO 13485/ISO9001 인증한 감마멸균업체에 위탁실시</li>
+                            </ul>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <!-- // page contents -->
+        </div>
+        <!-- // container -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+</body>
+</html>

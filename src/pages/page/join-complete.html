@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html')
+        <!-- // header -->
+
+        <!-- container -->
+        <div id="container" class="container member">
+            @@include('./layout/page-title.html', {
+                member : true,
+                noTitle : true,
+                title : '회원가입'
+            })
+            <!-- page contents -->
+            <div class="contents">
+                <div class="join-complete">
+                    <p class="welcome">환영합니다!<small>회원가입이 <em>완료</em>되었습니다.</small></p>
+                    <p class="desc"><em>홍길동</em>님의 회원가입을 진심으로 환영합니다.</p>
+                    <div class="btn-group">
+                        <a href="/" class="btn btn-lg btn-border-basic"><span>홈</span></a>
+                        <a href="/page/login.html" class="btn btn-lg btn-point"><span>로그인</span></a>
+                    </div>
+                </div>
+            </div>
+            <!-- // page contents -->
+        </div>
+        <!-- // container -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+</body>
+</html>
